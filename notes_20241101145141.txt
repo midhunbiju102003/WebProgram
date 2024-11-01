@@ -1,0 +1,105 @@
+11.01 2:51 PM
+Frame
+Here's an example HTML page with different types of frames:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frames Example</title>
+</head>
+<frameset rows="20%,80%">
+	<frame src="topframe.html" name="topframe" frameborder="1" scrolling="no" noresize>
+	<frameset cols="20%,80%">
+		<frame src="navframe.html" name="navframe" frameborder="1" scrolling="auto">
+		<frameset rows="50%,50%">
+			<frame src="content1.html" name="content1" frameborder="1" scrolling="auto">
+			<frame src="content2.html" name="content2" frameborder="1" scrolling="auto">
+		</frameset>
+	</frameset>
+</frameset>
+</html>
+```
+
+*topframe.html* (Floating Frame)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Top Frame</title>
+</head>
+<body>
+	<h2>Floating Frame (Top)</h2>
+	<p>This frame floats at the top of the page.</p>
+</body>
+</html>
+```
+
+*navframe.html* (Navigation Frame)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Frame</title>
+</head>
+<body>
+	<h2>Navigation Frame (Left)</h2>
+	<p><a href="content1.html" target="content1">Content 1</a></p>
+	<p><a href="content2.html" target="content2">Content 2</a></p>
+</body>
+</html>
+```
+
+*content1.html* (Mixed Frame)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content 1</title>
+</head>
+<body>
+	<h2>Content 1</h2>
+	<p>This is the first content frame.</p>
+</body>
+</html>
+```
+
+*content2.html* (Mixed Frame)
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Content 2</title>
+</head>
+<body>
+	<h2>Content 2</h2>
+	<p>This is the second content frame.</p>
+</body>
+</html>
+```
+
+*Explanation:*
+
+- The main HTML file uses `<frameset>` to define the frame layout.
+- The `rows` and `cols` attributes specify the frame sizes.
+- Each `<frame>` element has a `src` attribute pointing to an external HTML file.
+- The `name` attribute identifies each frame for targeting with links.
+- The `frameborder`, `scrolling`, and `noresize` attributes control frame appearance and behavior.
+
+*Types of Frames:*
+
+- *Floating Frame*: `topframe.html` floats at the top.
+- *Navigation Frame*: `navframe.html` provides links to other frames.
+- *Mixed Frame*: `content1.html` and `content2.html` display different content.
+
+*Note:* Frames are deprecated in HTML5. Consider using alternative layouts with CSS or JavaScript.
+
+Would you like to:
+
+1. Learn more about frame attributes?
+2. Explore alternative layout methods?
+3. Create a responsive frame layout?
